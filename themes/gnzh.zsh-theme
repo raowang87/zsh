@@ -45,8 +45,12 @@ else
 fi
 local git_branch='$(git_prompt_info)%{$PR_NO_COLOR%}'
 
-#PROMPT="${user_host} ${current_dir} ${rvm_ruby} ${git_branch}$PR_PROMPT "
-PROMPT="╭─${user_host} ${current_dir} ${rvm_ruby} ${git_branch}
+DALLAS_CURRENT_LOCA_="%{$fg[cyan]%}%~ %{  \$(git_prompt_info)%{$reset_color%}"
+
+# DEFAULT:  DALLAS_CURRENT_LOCA_="%{$fg[cyan]%}%~\$(git_prompt_info)%{$reset_color%}"
+
+PROMPT="${user_host} ${current_dir} ${rvm_ruby} ${git_branch}$PR_PROMPT "
+PROMPT="╭─${DALLAS_CURRENT_LOCA_}
 ╰─$PR_PROMPT "
 RPS1="${return_code}"
 

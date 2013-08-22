@@ -11,4 +11,5 @@ else
   alias ebuild='nocorrect ebuild'
   alias hpodder='nocorrect hpodder'
   alias sudo='nocorrect sudo'
+  alias ack='nocorrect ack'
 fi
